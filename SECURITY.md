@@ -7,14 +7,11 @@ You need to have this requirement satisfied
 | Requiremnet | Version          |
 | ------- | ------------------ |
 | Python   | >=3.8 |
-|    |                |
-|    |  |
-|   |                |
+|  opencv-python  | >=4.6.0.66 |
+|  urllib3  | >=1.26.12 |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you came across any vulnerability you can go to *adoniyasephraim@gmail.com*.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+I will try to answer you as soon as possible but If you are spaming chances of me getting to you will be close to 0.
