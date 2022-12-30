@@ -71,6 +71,12 @@ except:
     print("\n[-]There was an error while creating a folder")
 
 try:
+    second = float(input("\nPer how much second do you want to take pic? "))
+    print("\n[+]Succesfully changed the second")
+except:
+    print("\n[-]There was an error while trying to take your input")
+
+try:
     print("\nStarting the camera...")
     # Start the video capture
     cap = cv2.VideoCapture(0)
@@ -100,8 +106,8 @@ while True:
 
         # Save the frame as an image file in the "faces" folder
         # only if at least 1 second has passed since the last time a face was saved
-        if time.time() - last_saved_time >= 1:
-            cv2.imwrite("faces/face_{}.jpg".format(len(os.listdir("faces"))), frame)
+        if time.time() - last_saved_time >= second:
+            #cv2.imwrite("faces/face_{}.jpg".format(len(os.listdir("faces"))), frame)
             print("\n==>Face object Saved")
             last_saved_time = time.time()
 
@@ -112,13 +118,13 @@ while True:
 
         # Save the frame as an image file in the "bodies" folder
         # only if at least 1 second has passed since the last time a body was saved
-        if time.time() - last_saved_time >= 1:
-            cv2.imwrite("bodies/body_{}.jpg".format(len(os.listdir("bodies"))), frame)
+        if time.time() - last_saved_time >= second:
+            #cv2.imwrite("bodies/body_{}.jpg".format(len(os.listdir("bodies"))), frame)
             print("\n==>Body object saved")
             last_saved_time = time.time()
 
     # Display the resulting frame
-    cv2.imshow('Face Detection', frame)
+    cv2.imshow('SecuritySight', frame)
 
     # Stop the script when 'q' is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
